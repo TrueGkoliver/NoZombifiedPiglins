@@ -19,7 +19,6 @@ public class NetherPortalBlockMixin extends Block  {
     }
     @Inject(method="randomTick", at=@At("HEAD"), cancellable = true)
     private void randomTickI(BlockState state, ServerWorld worldIn, BlockPos pos, Random random, CallbackInfo ci) {
-        System.out.println("It's ticking, fools!");
         ci.cancel();
     }
 }
