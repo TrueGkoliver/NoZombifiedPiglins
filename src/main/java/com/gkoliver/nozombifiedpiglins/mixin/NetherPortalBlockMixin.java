@@ -12,14 +12,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Random;
 
-@Mixin(value=NetherPortalBlock.class, priority=1)
+@Mixin(value=NetherPortalBlock.class)
 public class NetherPortalBlockMixin extends Block  {
     public NetherPortalBlockMixin(Properties properties) {
         super(properties);
     }
-    @Inject(method="randomTick", at=@At(value="HEAD"), cancellable = true)
+    @Inject(method="randomTick", at=@At("HEAD"), cancellable = true)
     private void randomTickI(BlockState state, ServerWorld worldIn, BlockPos pos, Random random, CallbackInfo ci) {
-        System.out.println("Ticking");
+        System.out.println("It's ticking, fools!");
         ci.cancel();
     }
 }
