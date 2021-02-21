@@ -3,7 +3,7 @@
   "package": "com.gkoliver.nozombifiedpiglins.mixin",
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.8",
-  "refmap": "upgrade_aquatic.refmap.json",
+  "refmap": "nozombifiedpiglins.refmap.json",
   "mixins": [
     "NetherPortalBlockMixin"
   ],
